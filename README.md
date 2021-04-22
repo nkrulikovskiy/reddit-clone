@@ -11,6 +11,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34a8b78d-f5d6-46e0-8c32-7a92369516dc/deploy-status)](https://app.netlify.com/sites/redditer/deploys)
+
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
