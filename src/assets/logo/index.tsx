@@ -1,0 +1,11 @@
+export { ReactComponent as AllIcon } from "./All.svg";
+export { ReactComponent as CameraIcon } from "./Camera.svg";
+export { ReactComponent as EditIcon } from "./Edit.svg";
+export { ReactComponent as FreeIcon } from "./Free.svg";
+export { ReactComponent as HotIcon } from "./Hot.svg";
+export { ReactComponent as LogoIcon } from "./Logo.svg";
+export { ReactComponent as Logo2 } from "./Logo2.svg";
+export { ReactComponent as MessageIcon } from "./Message.svg";
+export { ReactComponent as NewIcon } from "./New.svg";
+export { ReactComponent as PopularIcon } from "./Popular.svg";
+export { ReactComponent as TopIcon } from "./Top.svg";
