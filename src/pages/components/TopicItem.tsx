@@ -3,12 +3,13 @@ import React, { ReactElement } from "react";
 import { PostTypeColor } from "../../consts/mockData";
 import Vote from "./vote";
 import { Block, CardGiftcard, Comment, Flag, Save, Share } from "@material-ui/icons";
+import CategoryItem from "../../components/header/CategoryItem";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
-      padding:'10px 20px 10px 5px',
+      padding: "10px 20px 10px 5px",
       borderBottom: "1px solid rgba(0,0,0,0.3)",
     },
   })
@@ -25,23 +26,14 @@ export default function TopicItem({
     <div className={classes.root}>
       <Vote voteCnt={voteCnt} />
       <Box>
-        <Box display="flex" alignItems="flex-start">
-          <Typography variant="subtitle1" noWrap={false}>
+        <div>
+          <Typography>
             {title}
+            <Link>{externalLink}</Link>
+            {postCategory && <CategoryItem postCategory={postCategory} />}
           </Typography>
           <Box mx={2}></Box>
-          <Link>{externalLink}</Link>
-          <Box mr={1}></Box>
-          {postCategory && (
-            <Box
-              borderRadius={15}
-              bgcolor={PostTypeColor[postCategory.postType]}
-              style={{ paddingRight: 15, paddingLeft: 15 }}
-            >
-              <Typography noWrap>{postCategory.title}</Typography>
-            </Box>
-          )}
-        </Box>
+        </div>
         <Typography variant="caption">
           Posted by {poster}
           {passedTime} ago

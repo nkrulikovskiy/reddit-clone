@@ -26,6 +26,9 @@ const lightTheme = createMuiTheme({
     subtitle1: {
       fontWeight: 500,
     },
+    subtitle2: {
+      lineHeight: 2.5,
+    },
   },
   overrides: {
     MuiButton: {

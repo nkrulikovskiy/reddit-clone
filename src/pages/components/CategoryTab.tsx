@@ -1,6 +1,17 @@
 import React, { ReactElement } from "react";
 
-import { Tabs, Tab, makeStyles, Theme, createStyles, TabProps, TabsProps, withStyles, Box } from "@material-ui/core";
+import {
+  Tabs,
+  Tab,
+  makeStyles,
+  Theme,
+  createStyles,
+  TabProps,
+  TabsProps,
+  withStyles,
+  Box,
+  Paper,
+} from "@material-ui/core";
 import { Equalizer, NewReleases, Whatshot } from "@material-ui/icons";
 export const RedditTabs = withStyles((theme: Theme) =>
   createStyles({
@@ -62,12 +73,14 @@ interface Props {}
 export default function CategoryTab({}: Props): ReactElement {
   const [tabIndex, setTabIndex] = React.useState(1);
   return (
-    <Box bgcolor="white" boxShadow={1} borderRadius={5} marginY={2} paddingX={2}>
-      <RedditTabs value={tabIndex} onChange={(e, index) => setTabIndex(index)}>
-        <RedditTab label={"Hot"} icon={<Whatshot style={{ marginBottom: "0px", marginRight: "5px" }} />} />
-        <RedditTab label={"New"} icon={<NewReleases style={{ marginBottom: "0px", marginRight: "5px" }} />} />
-        <RedditTab label={"Top"} icon={<Equalizer style={{ marginBottom: "0px", marginRight: "5px" }} />} />
-      </RedditTabs>
+    <Box bgcolor="white" borderRadius={5} marginY={2}>
+      <Paper variant="outlined">
+        <RedditTabs value={tabIndex} onChange={(e, index) => setTabIndex(index)}>
+          <RedditTab label={"Hot"} icon={<Whatshot style={{ marginBottom: "0px", marginRight: "5px" }} />} />
+          <RedditTab label={"New"} icon={<NewReleases style={{ marginBottom: "0px", marginRight: "5px" }} />} />
+          <RedditTab label={"Top"} icon={<Equalizer style={{ marginBottom: "0px", marginRight: "5px" }} />} />
+        </RedditTabs>
+      </Paper>
     </Box>
   );
 }
