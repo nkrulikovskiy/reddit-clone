@@ -18,7 +18,7 @@ export default function Moderators(): ReactElement {
   return (
     <div className={classes.root}>
       <Box>
-        <Paper>
+        <Paper variant="outlined">
           <Box p={2} borderRadius={5} bgcolor={theme.palette.primary.main} color="white">
             <Typography variant="subtitle1">View by Post Types</Typography>
           </Box>

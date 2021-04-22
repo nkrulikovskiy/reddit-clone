@@ -1,9 +1,18 @@
-import { Box, createStyles, IconButton, InputBase, makeStyles, Theme, useTheme } from "@material-ui/core";
+import { Box, createStyles, IconButton, InputBase, makeStyles, Paper, Theme, useTheme } from "@material-ui/core";
 import { Search as SearchIcon } from "@material-ui/icons";
 import React, { ReactElement, useState } from "react";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      display: "flex",
+      flexGrow: 1,
+      marginLeft: theme.spacing(2),
+    },
+    searchContainer: {
+      height: "3rem",
+      width: "100%",
+    },
     search: {
       display: "flex",
       justifyContent: "center",
@@ -30,9 +39,8 @@ const useStyle = makeStyles((theme: Theme) =>
     },
   })
 );
-interface Props {}
 
-export default function SearchBar({}: Props): ReactElement {
+export default function SearchBar(): ReactElement {
   const classes = useStyle();
   const theme = useTheme();
 
@@ -52,14 +60,8 @@ export default function SearchBar({}: Props): ReactElement {
   };
 
   return (
-    <div>
-      <Box
-        className={classes.search}
-        borderRadius={theme.shape.borderRadius}
-        bgcolor={isFocussed ? theme.palette.background.default : theme.palette.background.paper}
-        boxShadow="1"
-        height={"3rem"}
-      >
+    <div className={classes.root}>
+      <Paper variant="outlined" className={classes.searchContainer}>
         <IconButton disableRipple disableFocusRipple>
           <SearchIcon />
         </IconButton>
@@ -71,7 +73,7 @@ export default function SearchBar({}: Props): ReactElement {
           }}
           onKeyDown={onSearch}
         />
-      </Box>
+      </Paper>
     </div>
   );
 }
