@@ -1,10 +1,9 @@
-import { Box, Button, Collapse, createStyles, Divider, makeStyles, Paper, Theme, Typography } from "@material-ui/core";
-import React, { ReactElement } from "react";
-import GrowItem from "../../components/header/GrowItem";
+import { Box, Button, createStyles, Divider, makeStyles, Paper, Theme, Typography } from "@material-ui/core";
 import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import React, { ReactElement } from "react";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
@@ -13,9 +12,8 @@ const useStyle = makeStyles((theme: Theme) =>
     },
   })
 );
-interface Props {}
 
-export default function CreatePost({}: Props): ReactElement {
+export default function CreatePost(): ReactElement {
   const classes = useStyle();
   return (
     <div className={classes.root}>

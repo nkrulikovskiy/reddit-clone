@@ -23,7 +23,6 @@ import { Autocomplete } from "@material-ui/lab";
 import React, { ReactElement } from "react";
 import { ReactComponent as LogoIcon } from "../../assets/logo/Logo.svg";
 import { ReactComponent as LogoText } from "../../assets/logo/Logo2.svg";
-import GrowItem from "./GrowItem";
 import SearchBar from "./SearchBar";
 
 const useStyle = makeStyles((theme: Theme) =>
@@ -58,9 +57,7 @@ const RedditIconButton = withStyles((theme: Theme) =>
   })
 )((props: IconButtonProps) => <IconButton disableRipple {...props} />);
 
-interface Props {}
-
-export default function Header({}: Props): ReactElement {
+export default function Header(): ReactElement {
   const classes = useStyle();
   return (
     <div>

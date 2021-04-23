@@ -1,8 +1,6 @@
 import { Box, Button, createStyles, Link, makeStyles, Paper, Theme, Typography, useTheme } from "@material-ui/core";
 import { Message } from "@material-ui/icons";
 import React, { ReactElement } from "react";
-import { MessageIcon } from "../../assets/logo";
-import CategoryItem from "../../components/header/CategoryItem";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({

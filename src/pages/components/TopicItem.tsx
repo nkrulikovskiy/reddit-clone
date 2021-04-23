@@ -1,9 +1,8 @@
-import { Box, Button, createStyles, Divider, Link, makeStyles, Theme, Typography } from "@material-ui/core";
-import React, { ReactElement } from "react";
-import { PostTypeColor } from "../../consts/mockData";
-import Vote from "./vote";
+import { Box, Button, createStyles, Link, makeStyles, Theme, Typography } from "@material-ui/core";
 import { Block, CardGiftcard, Comment, Flag, Save, Share } from "@material-ui/icons";
+import React, { ReactElement } from "react";
 import CategoryItem from "../../components/header/CategoryItem";
+import Vote from "./vote";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
@@ -29,7 +28,7 @@ export default function TopicItem({
         <div>
           <Typography>
             {title}
-            <Link>{externalLink}</Link>
+            {externalLink && <Link href="">{externalLink}</Link>}
             {postCategory && <CategoryItem postCategory={postCategory} />}
           </Typography>
           <Box mx={2}></Box>

@@ -9,9 +9,8 @@ const useStyle = makeStyles((theme: Theme) =>
     },
   })
 );
-interface Props {}
 
-export default function CategoryList({}: Props): ReactElement {
+export default function CategoryList(): ReactElement {
   const classes = useStyle();
   const theme = useTheme();
   return (

@@ -1,15 +1,12 @@
+import { Box, Container, Grid, Paper } from "@material-ui/core";
 import React, { ReactElement } from "react";
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core";
 import Header from "../components/header/Header";
-import CategoryTab from "./components/CategoryTab";
-import TopicItem from "./components/TopicItem";
-import { mockComponent } from "react-dom/test-utils";
 import { mockPost } from "../consts/mockData";
-import CreatePost from "./components/CreatePost";
 import CategoryList from "./components/CategoryList";
+import CategoryTab from "./components/CategoryTab";
+import CreatePost from "./components/CreatePost";
 import Moderators from "./components/Moderators";
-
-interface Props {}
+import TopicItem from "./components/TopicItem";
 
 export default function Home(): ReactElement {
   return (

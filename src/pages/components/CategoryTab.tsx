@@ -1,18 +1,7 @@
+import { Box, createStyles, Paper, Tab, Tabs, Theme, withStyles } from "@material-ui/core";
+import { Equalizer, NewReleases, Whatshot } from "@material-ui/icons";
 import React, { ReactElement } from "react";
 
-import {
-  Tabs,
-  Tab,
-  makeStyles,
-  Theme,
-  createStyles,
-  TabProps,
-  TabsProps,
-  withStyles,
-  Box,
-  Paper,
-} from "@material-ui/core";
-import { Equalizer, NewReleases, Whatshot } from "@material-ui/icons";
 export const RedditTabs = withStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -68,9 +57,7 @@ export const RedditTab = withStyles((theme: Theme) =>
   })
 )(Tab);
 
-interface Props {}
-
-export default function CategoryTab({}: Props): ReactElement {
+export default function CategoryTab(): ReactElement {
   const [tabIndex, setTabIndex] = React.useState(1);
   return (
     <Box bgcolor="white" borderRadius={5} marginY={2}>

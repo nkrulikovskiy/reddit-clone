@@ -1,6 +1,6 @@
-import { Box, createStyles, IconButton, InputBase, makeStyles, Paper, Theme, useTheme } from "@material-ui/core";
+import { createStyles, IconButton, InputBase, makeStyles, Paper, Theme } from "@material-ui/core";
 import { Search as SearchIcon } from "@material-ui/icons";
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
@@ -42,21 +42,12 @@ const useStyle = makeStyles((theme: Theme) =>
 
 export default function SearchBar(): ReactElement {
   const classes = useStyle();
-  const theme = useTheme();
 
-  const [isFocussed, setFocussed] = useState(false);
 
-  const onSearchCancel = () => {
-    setFocussed(false);
-  };
   const onSearch = () => {
-    setFocussed(true);
     // if (event.key === "Enter") {
     //   setFocussed(false);
     // }
-  };
-  const onFocusLoss = () => {
-    setFocussed(false);
   };
 
   return (
